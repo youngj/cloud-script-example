@@ -1,5 +1,9 @@
-module.exports = {
-    getWeatherForZIPCode: function(zipcode) { 
+/*
+ * Example CommonJS module that exports functionality by adding properties 
+ * to the `exports` variable.
+ */
+
+exports.getWeatherForZIPCode = function(zipcode) { 
         var url = "http://weather.yahooapis.com/forecastrss";
         var response = httpClient.request(url, {
             method: 'GET',

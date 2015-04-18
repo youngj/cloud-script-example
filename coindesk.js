@@ -1,3 +1,7 @@
+/*
+ * Example CommonJS module that exports functionality by setting `module.exports`.
+ */
+
 module.exports = {
     getCurrentBitcoinPriceUSD: function() { 
         var url = "http://api.coindesk.com/v1/bpi/currentprice.json";

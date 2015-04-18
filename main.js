@@ -1,3 +1,9 @@
+/*
+ * Example main dispatcher script for SMS commands. 
+ *
+ * For best performance, it is recommended to separate each command into a different file,
+ * and only require the modules needed to handle the current message.
+ */
 
 var command = (word1 || "").toLowerCase();
 
