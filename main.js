@@ -5,6 +5,8 @@
  * and only require the modules needed to handle the current message.
  */
 
+console.log("== dev branch ==");
+ 
 var command = (word1 || "").toLowerCase();
 
 switch (word1)
