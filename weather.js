@@ -3,7 +3,7 @@ module.exports = {
         var url = "http://weather.yahooapis.com/forecastrss";
         var response = httpClient.request(url, {
             method: 'GET',
-            params: {p: zipCode}
+            params: {p: zipcode}
         });
          
         var parser = new DOMParser();
@@ -16,7 +16,7 @@ module.exports = {
          
         if (!locationElem)    
         {
-            return "Sorry, we couldn't find the zipcode " + zipCode + ".";
+            return "Sorry, we couldn't find the zipcode " + zipcode + ".";
         }
          
         var location = locationElem.getAttribute("city") + 
