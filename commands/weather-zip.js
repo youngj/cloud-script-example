@@ -1,13 +1,13 @@
 
 var weather = require('../weather');
 
-var zipcode = word2;
+var placeName = remainder1;
  
-if (!/^\d{5}$/.test(zipcode))
+if (!placeName)
 {
-    sendReply("Please enter a 5 digit US zipcode (e.g. 94111).");
+    sendReply("Please send the keyword 'weather' followed by a place name (e.g. 'weather san francisco').");
 }
 else
 {
-    sendReply(weather.getWeatherForZIPCode(zipcode));
+    sendReply(weather.getWeather(placeName));
 }
