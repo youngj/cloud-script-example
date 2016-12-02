@@ -39,4 +39,4 @@ by adding a Cloud Script API service like this:
 require('ext/example-dev/main');
 ```
 
-To import your own repository into the Telerivet Cloud Script API, contact us at support@telerivet.com
+To import your own repository into the Telerivet Cloud Script API, go to https://telerivet.com/dashboard/a/script_modules .
