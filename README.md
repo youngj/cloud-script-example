@@ -14,8 +14,14 @@ Using your own git repository has several advantages over writing the code direc
 
 The master branch of this repository is imported into Telerivet with the module id `ext/example`. 
 
-To try it, just create a Cloud Script API service at https://telerivet.com/dashboard/services ,
-and add one line of code:
+To try it, add a Cloud Script Module at https://telerivet.com/dashboard/a/script_modules :
+
+* Set the Module Namespace to `ext/example`
+* Set the Git Repository Clone URL to `https://github.com/Telerivet/cloud-script-example.git`
+* Set the Branch to `master`.
+
+Then, create a Cloud Script API service that is triggered for an incoming message at 
+https://telerivet.com/dashboard/services , and add one line of code:
 
 ```
 require('ext/example/main');
@@ -31,12 +37,14 @@ To import other modules in the same repository, you can use relative imports. Fo
 `require('./commands/hello');` has the same effect as `require('ext/example/commands/hello');`.
 
 However, relative imports are always preferable because they allow you to use different branches
-for development and production code. For example the code "dev" branch of this repository is
-imported into Telerivet with the module ID `ext/example-dev`. Then the "dev" branch can be tested 
-by adding a Cloud Script API service like this:
+for development and production code. 
+
+For example, you could import the "dev" branch of this repository into Telerivet with the module ID 
+`ext/example-dev`. Then the "dev" branch can be tested by adding a Cloud Script API service like this:
 
 ```
 require('ext/example-dev/main');
 ```
 
-To import your own repository into the Telerivet Cloud Script API, go to https://telerivet.com/dashboard/a/script_modules .
+To import your own repository into the Telerivet Cloud Script API, 
+go to https://telerivet.com/dashboard/a/script_modules .
